@@ -207,12 +207,16 @@ const artists = [
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
+console.log(artists[0].name);
+
+console.log(artists[2].bio);
 
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+artists[8].name = "Vincent Van Gogh";
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,21 +226,28 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(id) {
+    console.log("The artist at index " + id + " is " + artists[id].name + ".");
+    return "The artist at index " + id + " is " + artists[id].name + ".";
   }
   
+  
+  getArtistByIndex(0);
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
+function get20s(artistsbirthrange){
+  const names = [] ;
+  for ( i = 0 ; i < artistsbirthrange ; i++){
+    if(1899 < artists[i].years.substr(0,4) && artists[i].years.substr(0,4) < 2001){
+      names.push(artists[i].name);
+    }
+  }
+  console.log(names);
 }
-
+get20s(20);
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -248,11 +259,13 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
+function removeArtist(index) {
+  artists.splice(index,1);
+  console.log(artists.length);
     /* code here */
   }
   
-  /**
+  removeArtist(0);
 
 
 
