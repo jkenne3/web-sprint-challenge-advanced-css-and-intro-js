@@ -227,7 +227,7 @@ console.log(artists[8].name);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id) {
-    console.log("The artist at index " + id + " is " + artists[id].name + ".");
+    console.log("The artist at index " +id +" is " +artists[id].name + ". ");
     return "The artist at index " + id + " is " + artists[id].name + ".";
   }
   
@@ -239,13 +239,13 @@ function getArtistByIndex(id) {
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
 function get20s(artistsbirthrange){
-  const names = [] ;
-  for ( i = 0 ; i < artistsbirthrange ; i++){
+  const nameofartist = [0] ;
+  for (i = 0 ; i < artistsbirthrange ; i++){
     if(artists[i].years.substr(0,4) < 2001 && 1899 < artists[i].years.substr(0,4)){
-      names.push(artists[i].name);
+      nameofartist.push(artists[i].name);
     }
   }
-  console.log(names);
+  console.log(nameofartist);
 }
 get20s(20);
 
@@ -292,7 +292,7 @@ const newobject = {
 
 function addArtist(added){
     artists.push(added);
-    var end = (artists.length);
+    let end = (artists.length);
 }
 
 addArtist(newobject);
@@ -309,13 +309,13 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(artists){
 
-  const names = [];
-  for ( i= 0 ; i < artists.length ; i++) {
+  const nameofartist = [];
+  for (i= 0 ; i < artists.length ; i++) {
     if(artists[i].paintings > 100) {
-      names.push(artists[i].name);
+      nameofartist.push(artists[i].name);
     }
   }
-  console.log(names);
+  console.log(nameofartist);
 
   /* Code here */
 
@@ -356,11 +356,28 @@ function getHTML(/* Code here */){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(artists){
 
-    /* Code here */
+  let currentIndex = artists.length, temporaryValue, randomIndex;
 
+  while (0 !== currentIndex) {
+  
+  
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -=1;
+
+    temporaryValue = artists[currentIndex];
+    artists[currentIndex] = artists[randomIndex];
+    artists[randomIndex] = temporaryValue;
+
+  
   }
 
+  let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  console.log(randomize(myArray));
 
- /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+}
+
+
+ /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */ 
