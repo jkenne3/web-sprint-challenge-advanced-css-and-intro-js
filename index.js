@@ -241,7 +241,7 @@ function getArtistByIndex(id) {
 function get20s(artistsbirthrange){
   const names = [] ;
   for ( i = 0 ; i < artistsbirthrange ; i++){
-    if(1899 < artists[i].years.substr(0,4) && artists[i].years.substr(0,4) < 2001){
+    if(artists[i].years.substr(0,4) < 2001 && 1899 < artists[i].years.substr(0,4)){
       names.push(artists[i].name);
     }
   }
@@ -261,7 +261,7 @@ get20s(20);
 */
 function removeArtist(index) {
   artists.splice(index,1);
-  console.log(artists.length);
+  console.log("#"+artists.length);
     /* code here */
   }
   
@@ -281,12 +281,23 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
+const newobject = {
+  id: 21,
+  name: "Jim K.", 
+  years: "1999 - 2020",
+  genre: "Web Dev", 
+  nationality: "USA",
+  bio: "Lorem ipsum", 
+}
 
-function addArtist(/* Code here */){
+function addArtist(added){
+    artists.push(added);
+    var end = (artists.length);
+}
 
-    /* Code here */
+addArtist(newobject);
+console.log(newobject);
 
-  }
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -296,11 +307,20 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(artists){
+
+  const names = [];
+  for ( i= 0 ; i < artists.length ; i++) {
+    if(artists[i].paintings > 100) {
+      names.push(artists[i].name);
+    }
+  }
+  console.log(names);
 
   /* Code here */
 
 }
+lotsOfArt(artists);
 
 
 

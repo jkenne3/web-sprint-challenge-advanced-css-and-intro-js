@@ -64,7 +64,7 @@ Follow these steps to set up your project:
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
-Navigate to `index.js` and complete the MVP challenges. Note that you need to scroll past data (or collapse data in VScode) to find the challenges below.
+Navigate to `index.js` and complete the MVP challenges. Note that you need  (or collapse data in VScode) to find the challenges below.
 
 ### Task 3: Stretch Problems
 
