@@ -23,10 +23,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe preprocessing to someone new to CSS?
+
+x This is the process that takes place when you code using LESS and it processes it and outputs it into compiled CSS in the background.
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+x Favorite concept is nesting because it allows you to easily sync the css with the corresponding html. I didn't have any big issues with pre-processing
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+x It's somewhat self-explanatory and is simply a characteristic you create manually, name it whatever you like, and give it a value of anything you like (number, words, etc.).
+
 4. What is the purpose of using functions in code?
+
+x functions are used to actually compute and execute something in the computer. They can be used instead of replicating commands. 
+
 5. What is JSON data?
+
+x JavaScript Object Notation data: it is the format javascript uses to store data.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -50,7 +64,7 @@ Follow these steps to set up your project:
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
-Navigate to `index.js` and complete the MVP challenges. Note that you need to scroll past data (or collapse data in VScode) to find the challenges below.
+Navigate to `index.js` and complete the MVP challenges. Note that you need  (or collapse data in VScode) to find the challenges below.
 
 ### Task 3: Stretch Problems
 
